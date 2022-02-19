@@ -1,5 +1,7 @@
 const Home = (): JSX.Element => {
-  return <div>Hello Next.js!</div>;
+  return (
+  <div className="">Hello Next.js!</div>
+  );
 };
 
 export default Home;
