@@ -1,14 +1,13 @@
-// eslint-disable-next-line import/order
-import { SideBar } from '@/components/uiGroup/Sidebar';
+import { Layout } from '@/components/layout/Layout';
+
 import type { AppProps } from 'next/app';
 import 'tailwindcss/tailwind.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className='flex'>
-      <SideBar />
+    <Layout>
         <Component {...pageProps} />
-    </div>
+    </Layout>
   );
 }
 

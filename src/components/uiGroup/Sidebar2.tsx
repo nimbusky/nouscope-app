@@ -1,5 +1,3 @@
-
-   
 import { AiFillHome } from 'react-icons/ai';
 import { FaBookOpen, FaCog } from 'react-icons/fa';
 import { GiStairs } from 'react-icons/gi';

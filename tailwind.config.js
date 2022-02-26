@@ -30,10 +30,10 @@ module.exports = {
         },
         // メインカラー
         primary: {
-          // light: '',
+          light: '#295e9c',
           // medium: '',
-          DEFAULT: '#242424',
-          // dark: '',
+          DEFAULT: '#214b7d',
+          dark: '#1a3c64',
         },
         // サブカラー
         // secondary: {
