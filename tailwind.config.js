@@ -7,7 +7,6 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       // スプレッドで展開している前に、メインとしたいフォント名を追加する

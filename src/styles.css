@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-ja leading-relaxed tracking-wider;
+  }
+}
+
+
+@layer components{
+  .icon {
+    @apply hidden md:inline-flex p-2 mx-3 h-8 w-8 bg-gray-200 rounded-full text-gray-700 cursor-pointer hover:bg-gray-300;
+  }
+}
+

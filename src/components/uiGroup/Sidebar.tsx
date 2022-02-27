@@ -4,10 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
 import { AiFillHome } from 'react-icons/ai';
-import {
-  BsFillArrowLeftSquareFill,
-  BsFillArrowRightSquareFill
-} from 'react-icons/bs';
+import { BiRightArrow , BiLeftArrow } from 'react-icons/bi';
 import { FaBookOpen, FaCog } from 'react-icons/fa';
 import { GiStairs } from 'react-icons/gi';
 import { IoTelescope } from 'react-icons/io5';
@@ -105,11 +102,7 @@ export const SideBar= () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <motion.div animate={controls} className='group flex relative flex-col py-10 max-w-[250px] border-r border-gray-700 duration-300 animate' >
-
-        {/* サイドバーの開閉 */}
-        {active && <BsFillArrowLeftSquareFill onClick={showLess} className='hidden group-hover:block absolute top-10 -right-4 text-2xl text-white cursor-pointer' />}
-        {!active && <BsFillArrowRightSquareFill onClick={showMore} className='absolute top-10 -right-4 text-2xl text-white cursor-pointer' />}
+      <motion.div animate={controls} className='group flex relative flex-col py-10 max-w-[250px] h-full border-r border-gray-700 duration-300 animate' >
 
         <div className='grow'>
           {data.map((group, index) => (
@@ -118,7 +111,7 @@ export const SideBar= () => {
 
               {group.items.map((item, index2) => (
                 <div key={index2} className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer'> 
-                  <item.icon className='text-3xl text-theme-light' />
+                  <item.icon className=' text-theme-light' size={30} />
                   <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
                 </div>
 
@@ -133,7 +126,7 @@ export const SideBar= () => {
 
               {group.items.map((item, index2) => (
                 <div key={index2} className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer' >
-                  <item.icon className='text-3xl text-theme-light' />
+                  <item.icon className='text-theme-light' size={30} />
                   <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
                 </div>
 
@@ -141,7 +134,12 @@ export const SideBar= () => {
             </div>
           ))}
         </div>
+        {/* サイドバーの開閉 */}
+        {active && <BiLeftArrow onClick={showLess} className='ml-4 text-3xl text-white hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
+        {!active && <BiRightArrow onClick={showMore} className='ml-4 text-3xl text-white hover:text-primary hover:bg-white rounded-xl cursor-pointer' />}
       </motion.div>
+        
+        
 
     </div>
   );
