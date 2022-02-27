@@ -15,6 +15,8 @@
     "prettier",
     "plugin:tailwindcss/recommended"
   ],
+  // tailwind.config.js などの config ファイル、ESLint の対象外にする
+  "ignorePatterns": ["*.config.js"],
   "plugins": ["@typescript-eslint", "import", "unused-imports", "tailwindcss"],
   "rules": {
     // あった方が良さそうなルール
@@ -27,15 +29,7 @@
     "import/order": [
       "error",
       {
-        "groups": [
-          "builtin",
-          "external",
-          "internal",
-          ["parent", "sibling"],
-          "object",
-          "type",
-          "index"
-        ],
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object", "type"],
         "newlines-between": "always",
         "pathGroupsExcludedImportTypes": ["builtin"],
         "alphabetize": { "order": "asc", "caseInsensitive": true }

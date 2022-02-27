@@ -3,8 +3,10 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
   mode: 'jit', //JITモードを有効化
   // パージの対象ファイルを設定
-  purge: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     fontFamily: {
       // スプレッドで展開している前に、メインとしたいフォント名を追加する
@@ -27,10 +29,10 @@ module.exports = {
         },
         // メインカラー
         primary: {
-          // light: '',
+          light: '#295e9c',
           // medium: '',
-          DEFAULT: '#242424',
-          // dark: '',
+          DEFAULT: '#214b7d',
+          dark: '#1a3c64',
         },
         // サブカラー
         // secondary: {
