@@ -7,7 +7,6 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       // スプレッドで展開している前に、メインとしたいフォント名を追加する
@@ -30,10 +29,10 @@ module.exports = {
         },
         // メインカラー
         primary: {
-          // light: '',
+          light: '#295e9c',
           // medium: '',
-          DEFAULT: '#242424',
-          // dark: '',
+          DEFAULT: '#214b7d',
+          dark: '#1a3c64',
         },
         // サブカラー
         // secondary: {

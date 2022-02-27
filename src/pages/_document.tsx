@@ -12,6 +12,7 @@ class MyDocument extends Document {
       <Html lang='ja' dir='ltr'>
         <Head>
           {/* サイト全体に反映させたいデフォルトの設定を記述する ex) Google Fonts の読み込み */}
+          <meta name="application-name" content="MyApp" />
         </Head>
         <body>
           <Main />
