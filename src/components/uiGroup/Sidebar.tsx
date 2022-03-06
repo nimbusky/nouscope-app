@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 import { motion, useAnimation } from 'framer-motion';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { AiFillHome } from 'react-icons/ai';
 import { BiRightArrow , BiLeftArrow } from 'react-icons/bi';
@@ -17,18 +18,22 @@ const data = [
       {
         title: 'ホーム',
         icon: AiFillHome,
+        url: '/'
       },
       {
         title: '性格分析',
         icon: IoTelescope,
+        url: '/personality'
       },
       {
         title: '自己分析',
         icon: FaBookOpen,
+        url: '/resume'
       },
       {
         title: '目標設定',
         icon: GiStairs,
+        url: '/goal'
       },
     ]
   }
@@ -110,10 +115,14 @@ export const SideBar= () => {
               <motion.p animate={controlTitleText} className='mb-2 ml-4 text-lg font-bold text-gray-500' >{group.name}</motion.p>
 
               {group.items.map((item, index2) => (
-                <div key={index2} className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer'> 
-                  <item.icon className=' text-theme-light' size={30} />
-                  <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
-                </div>
+                <Link href ={item.url} passHref key={index2} >
+                  <div className='flex items-center py-2 px-4 hover:text-white hover:bg-gray-400 rounded-3xl hover:rounded-xl transition-all duration-300 ease-linear cursor-pointer'>
+                    
+                      <item.icon className=' text-theme-light' size={30} />
+                      <motion.span animate={controlText} className='ml-4 font-bold text-theme-light' > {item.title}</motion.span>
+                    
+                  </div>
+                </Link>
 
               ))}
             </div>
