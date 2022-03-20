@@ -31,7 +31,7 @@ module.exports = {
         primary: {
           light: '#295e9c',
           // medium: '',
-          DEFAULT: '#214b7d',
+          DEFAULT: '#2E70D2',
           dark: '#1a3c64',
         },
         // サブカラー
