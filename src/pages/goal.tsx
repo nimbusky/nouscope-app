@@ -1,17 +1,12 @@
-import Head from "next/head";
+import { Layout } from "@/components/layout/Layout";
 
 import type { NextPage } from "next";
 
 const Goal: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>Goal Page</title>
-      </Head>
-      <main>
-        <h1>ここは目標設定ページです</h1>
-      </main>
-    </div>
+    <Layout title="Goal page">
+      <h1>ここは目標管理ページです。</h1>
+    </Layout>
   );
 };
 

@@ -8,7 +8,7 @@ export const Header = () => {
       <div className='flex items-center'>
         <Image 
           alt='product'
-          src = '/images/nimbusky.png'
+          src = '/images/nouscope.png'
           width={30}
           height={30}
           layout='fixed'
